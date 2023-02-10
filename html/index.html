@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VizSNP-ST</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <h1>VizSNP-ST</h1>
+
+      <form id="vizsnpForm" class="mb-3">
+        <div class="mb-3">
+          <label for="inputFiles">Select input files</label>
+          <input type="file" id="inputFiles" name="inputFiles" class="form-control" accept=".vcf,.vcf.gz,.vcf.tbi,.vcf.gz.tbi" multiple required />
+          <div class="form-text">
+            Examples:
+            <a href="example/test.vcf.gz" download>test.vcf.gz</a>
+            <a href="example/test.vcf.gz.tbi" download>test.vcf.gz.tbi</a>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="limit">Limit</label>
+          <input type="number" id="limit" name="limit" class="form-control" placeholder="Limit" value="1000" min="0" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="gene">Gene</label>
+          <input type="text" id="gene" name="gene" class="form-control" placeholder="Gene (optional)" />
+        </div>
+
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <pre id="results"></pre>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
