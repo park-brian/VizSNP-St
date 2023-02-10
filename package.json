@@ -1,0 +1,22 @@
+{
+  "name": "vizsnp-client-only",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vizsnp.js",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@gmod/tabix": "^1.5.5",
+    "@gmod/vcf": "^5.0.10",
+    "generic-filehandle": "^3.0.1"
+  },
+  "devDependencies": {
+    "esbuild-plugin-polyfill-node": "^0.1.4",
+    "esbuild": "^0.17.7"
+  }
+}
