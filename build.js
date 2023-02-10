@@ -6,7 +6,7 @@ build({
 	bundle: true,
 	minify: true,
 	sourcemap: true,
-	outfile: "html/app.js",
+	outfile: "docs/app.js",
 	plugins: [
 		polyfillNode({
       polyfills: ['buffer']
