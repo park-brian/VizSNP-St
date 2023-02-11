@@ -32,12 +32,20 @@
           <input type="text" id="gene" name="gene" class="form-control" placeholder="Gene (optional)" />
         </div>
 
-        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" id="submit" class="btn btn-primary">
+          Submit
+          <div class="spinner-border spinner-border-sm text-light" role="status" id="loading" hidden>
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </button>
       </form>
 
-      <pre id="results"></pre>
+      <div id="results"></div>
+      <div id="resultsGrid" style="height: 400px" class="ag-theme-alpine w-100"></div>
+
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
