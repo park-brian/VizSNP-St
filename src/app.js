@@ -33,10 +33,11 @@ vizsnpFormElement.onsubmit = async function submit(event) {
     const vcfFileInput = new BlobFile(vcfFile);
     const tbiFileInput = new BlobFile(tbiFile);
     const results = await vizsnp(vcfFileInput, tbiFileInput, limit, gene, "human");
+    console.table(results);
     let end = Date.now();
 
-    // show results
-    resultsElement.innerHTML = `Loaded ${results.length} variants in ${(end - start) / 1000}s\n`;
+    // show results (todo: show in table and add icn3d viewer)
+    resultsElement.innerHTML = `Loaded ${results.length} variant(s) in ${(end - start) / 1000}s. View browser console to inspect results. \n`;
     resultsElement.innerHTML += JSON.stringify(results, null, 2);
   } catch (e) {
     console.error(e);
